@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fadil Ainuddin 20753047</title>
+</head>
+
+<body bgcolor="#FFFACD">
+    <marquee loop="5" scrollamount="10" style="font-size: 30px; color: rgb(12, 2, 2); font-family:Courier ;"><h3>SELAMAT DATANG</h3></marquee>
+<table align="center">
+    <tbody>
+        <td bgcolor="#F0E68C">
+            <fieldset>
+                <legend align="center"><b><u>Inputkan Data</u></b></legend>
+        <div>
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div>
+                <label><b><i>NPM<i><b></label><label class="validation-error hide"
+                     id="fullNameValidationError"></label>
+                    <br>
+                <input type="text" name="npm" id="npm">
+            </div>
+            <div>
+                <label><b><i>Nama Mahasiswa</i></b></label><br>
+                <input type="text" name="nama" id="nama">
+            </div>
+            <div>
+                <label><b><i>Alamat Blog Mahasiswa</i><b></label><br>
+                <input type="text" name="blog" id="blog">
+            </div>
+            <div>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        </div>
+    </tbody>
+</table>
+
+    <br/>
+    <div>
+        <table  bgcolor="#F0E68C" align="center" border="1"cellpadding="10px" id="employeeList">
+            <thead>
+                <tr bgcolor="#F5F5F5">
+                    <th>NPM</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Alamat Blog Mahasiswa</th>
+                    <th>Pilih</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="fungsi.js"></script>
+</body>
+
+</html>
