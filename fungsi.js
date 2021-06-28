@@ -15,7 +15,8 @@ function readFormData() {
     var formData = {};
     formData["npm"] = document.getElementById("npm").value;
     formData["nama"] = document.getElementById("nama").value;
-    formData["blog"] = document.getElementById("blog").value;
+    formData["alamt"] = document.getElementById("alamat").value;
+    formData["email"] = document.getElementById("email").value;
     return formData;
 }
 
@@ -27,16 +28,19 @@ function insertNewRecord(data) {
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.nama;
     cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.blog;
+    cell3.innerHTML = data.alamt;
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+    cell4.innerHTML = data.alamt;
+    cell5 = newRow.insertCell(4);
+    cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
 function resetForm() {
     document.getElementById("npm").value = "";
     document.getElementById("nama").value = "";
-    document.getElementById("blog").value = "";
+    document.getElementById("alamat").value = "";
+    document.getElementById("email").value = "";
     selectedRow = null;
 }
 
@@ -44,12 +48,16 @@ function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
     document.getElementById("npm").value = selectedRow.cells[0].innerHTML;
     document.getElementById("nama").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("blog").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("alamat").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("email").value = selectedRow.cells[3].innerHTML;
+
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.npm;
     selectedRow.cells[1].innerHTML = formData.nama;
     selectedRow.cells[2].innerHTML = formData.blog;
+    selectedRow.cells[3].innerHTML = formData.blog;
+
 }
 
 function onDelete(td) {
